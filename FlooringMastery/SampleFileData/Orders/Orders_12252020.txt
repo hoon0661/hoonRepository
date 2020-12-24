@@ -1,0 +1,2 @@
+OrderNumber::CustomerName::State::TaxRate::ProductType::Area::CostPerSquareFoot::LaborCostPerSquareFoot::MaterialCost::LaborCost::Tax::Total
+1::Hoon Kim::IN::7.00::Glass::9000.0::20.00::12.00::180000.00::108000.00::20160.00::308160.00

@@ -1,0 +1,2 @@
+OrderNumber::CustomerName::State::TaxRate::ProductType::Area::CostPerSquareFoot::LaborCostPerSquareFoot::MaterialCost::LaborCost::Tax::Total
+1::Hoon Kim::CA::25.00::Laminate::5600.0::1.75::2.10::9800.00::11760.00::5390.00::26950.00

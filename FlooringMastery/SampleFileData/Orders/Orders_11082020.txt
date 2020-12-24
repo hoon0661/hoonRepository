@@ -1,0 +1,2 @@
+OrderNumber::CustomerName::State::TaxRate::ProductType::Area::CostPerSquareFoot::LaborCostPerSquareFoot::MaterialCost::LaborCost::Tax::Total
+2::Hoon Kim::CA::25.00::Tile::50000.0::3.50::4.15::175000.00::207500.00::95625.00::478125.00

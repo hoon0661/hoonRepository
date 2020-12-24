@@ -1,0 +1,2 @@
+OrderNumber::CustomerName::State::TaxRate::ProductType::Area::CostPerSquareFoot::LaborCostPerSquareFoot::MaterialCost::LaborCost::Tax::Total
+1::hahahaha::IN::7.00::Carpet::6000.0::2.25::2.10::13500.00::12600.00::1827.00::27927.00

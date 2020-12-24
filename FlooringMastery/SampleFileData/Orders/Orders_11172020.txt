@@ -1,0 +1,2 @@
+OrderNumber::CustomerName::State::TaxRate::ProductType::Area::CostPerSquareFoot::LaborCostPerSquareFoot::MaterialCost::LaborCost::Tax::Total
+1::Gloralda Thaci::TX::4.45::Wood::5000.0::5.15::4.75::25750.00::23750.00::2202.75::51702.75

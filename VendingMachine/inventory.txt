@@ -1,0 +1,4 @@
+snickers::1.5::0
+mixednuts::2.0::2
+cheetos::1.0::10
+lays::0.5::4

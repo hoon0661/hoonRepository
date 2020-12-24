@@ -1,0 +1,4 @@
+OrderNumber::CustomerName::State::TaxRate::ProductType::Area::CostPerSquareFoot::LaborCostPerSquareFoot::MaterialCost::LaborCost::Tax::Total
+1::Bruce Lee::CA::25.00::Carpet::60000.0::2.25::2.10::135000.00::126000.00::65250.00::326250.00
+2::Hoon Kim::TX::15.00::Tile::62300.0::55.12::4.32::1300.00::16000.00::650.00::3250.00
+3::hoon kim::WA::9.25::Laminate::8000.0::1.75::2.10::14000.00::16800.00::2849.00::33649.00

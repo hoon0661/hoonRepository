@@ -13,30 +13,31 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <div id="initialPage">
             <form class="form-horizontal" role="form">
                 <div class="form-group row">
                     <button class="col-md-2 btn btn-primary" id="createDVD" onclick="showCreateForm()"> Create
                         Dvd</button>
                     <button class="offset-md-1 col-md-2 btn btn-success" id="searchButton">Search</button>
-                    <select name="" id="category" class="offset-md-1 col-md-2">
+                    <select name="" id="category" class="offset-md-1 col-md-2 border border-success">
                         <option value="title" id="byTitle">Title</option>
                         <option value="year" id="byYear">Year</option>
                         <option value="director" id="byDirector">Director</option>
                         <option value="rating" id="byRating">Rating</option>
                         <option value="all" id="byAll">All</option>
                     </select>
-                    <input type="text" class="offset-md-1 col-md-3" placeholder="Search Term" id="searchInput">
+                    <input type="text" class="offset-md-1 col-md-3 border border-success" placeholder="Search Term"
+                        id="searchInput">
                 </div>
             </form>
             <hr>
 
             <ul class="list-group" id="errorMessages"></ul>
 
-            <table class="table">
+            <table class="table table-bordered">
                 <thead>
-                    <tr>
+                    <tr class="table-active">
                         <th width="25%">Title</th>
                         <th width="20%">Release Date</th>
                         <th width="20%">Director</th>
@@ -104,7 +105,7 @@
             <form action="" class="form-horizontal" id="DVDForm">
                 <div class="form-group row">
                     <label class="col-md-3" for="createTitle">Dvd Title:</label>
-                    <input type="text" id="createTitle" required>
+                    <input type="text" id="createTitle" placeholder="Enter Title" required>
                 </div>
 
                 <div class="form-group row">
@@ -134,8 +135,8 @@
                 </div>
 
                 <div class="form-group row">
-                    <button type="button" onclick="backToHome()">Cancel</button>
-                    <button type="button" class="offset-md-1" id="createButton">Create Dvd</button>
+                    <button type="button" class="btn btn-danger" onclick="backToHome()">Cancel</button>
+                    <button type="button" class="offset-md-1 btn btn-primary" id="createButton">Create Dvd</button>
                 </div>
 
             </form>

@@ -1,0 +1,15 @@
+.btn{
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.resize{
+    width: 20px;
+    height: 40px;
+    margin: 10px 10px;
+}
+
+.sizeInputDiv{
+    margin: auto;
+}

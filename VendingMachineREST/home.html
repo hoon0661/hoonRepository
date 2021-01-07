@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vending Machine</title>
 
-
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/home.css">
@@ -21,30 +18,13 @@
         <h1 class="display-5 text-center">Vending Machine</h1>
         <hr>
         <div class="row">
-            <div class="col-md-8">
-                <div class="row" id="row1">
+            <div class="col-md-8" id="content">
 
-
-
-                </div>
-
-                <div class="row" id="row2">
-
-
-
-                </div>
-
-                <div class="row" id="row3">
-
-
-
-                </div>
             </div>
 
             <div class="col-md-4">
                 <div class="sizeInputDiv">
                     <h5 class="text-center">Total $ In</h5>
-                    <!-- <div class="border">amount</div> -->
                     <input class="form-control bg-white" type="number" id="moneyInput" readonly>
                     <div class="form-row">
                         <button class="col btn border resize" id="addDollar">Add Dollar</button>
@@ -62,7 +42,6 @@
                     <input type="text" class="form-control bg-white" id="message" readonly>
                     <input type="text" id="itemId" readonly hidden>
                     <input type="text" id="itemPrice" readonly hidden>
-
                     <div class="form-row">
                         <label for="itemNum">Item #: </label>
                         <input type="text" class="form-control bg-white" id="itemNum" readonly>
@@ -75,10 +54,7 @@
 
                 <div class="sizeInputDiv">
                     <h5 class="text-center">Change</h5>
-                    <!-- <div class="border">Change</div> -->
-
                     <input type="text" class="form-control bg-white" id="changes" readonly>
-
                     <div class="form-row">
                         <button class="col btn border resize" id="changeReturnButton">Change Return</button>
                     </div>

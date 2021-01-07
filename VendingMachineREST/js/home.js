@@ -16,34 +16,38 @@ function loadItems() {
         type: 'GET',
         url: 'http://tsg-vending.herokuapp.com/items',
         success: function (items) {
+
+            var length = items.length;
+            var numRows = length / 3;
+            if (length % 3 != 0) {
+                numRows = Math.ceil(numRows);
+            }
+
             $.each(items, function (index, item) {
+
+                for (var i = 1; i <= numRows; i++) {
+                    $('#content').append('<div class="row" id="row' + i + '"></div>');
+                }
 
                 var rowName = '#row' + rowVal;
                 var contentRows = $(rowName);
-
                 var id = item.id;
                 var name = item.name;
                 var price = item.price;
                 var quantity = item.quantity;
                 var row = '';
-                if (itemNum > 9 && itemNum % 3 == 1) {
-                    row += '<div class="row" id="additionalRow"><div class="col-md-8"><div class="row" id="row' + rowVal + '">';
-                }
 
-                row += '<div class="col-md-4"><div class="btn btn-lg border" onclick="updateMessages(' + id + ',' + itemNum + ',' + quantity + ',' + price + ')"><h5 class="display-5 text-left" id="itemNum1">' + itemNum + '</h5>';
+                row += '<div class="col"><div class="btn btn-lg border btnResize" onclick="updateMessages('
+                    + id + ',' + itemNum + ',' + quantity + ',' + price + ')"><h5 class="display-5 text-left">'
+                    + itemNum + '</h5>';
                 row += '<p class="text-center">' + name + '</p>';
                 row += '<p class="text-center">$' + price + '</p>';
                 row += '<p class="text-center">Quantity: ' + quantity + '</p>' + '</div>' + '</div>';
 
-                if (itemNum > 9 && itemNum % 3 == 1) {
-                    row += '</div></div></div>';
-                    $('#page').append(row);
-                } else {
-                    contentRows.append(row);
-                }
+                contentRows.append(row);
 
                 itemNum++;
-                if (itemNum % 3 == 1) {
+                if (itemNum > 3 && itemNum % 3 == 1) {
                     rowVal++;
                 }
             })
@@ -78,8 +82,6 @@ function makePurchase() {
 
         var id = $('#itemId').val();
         var amount = $('#moneyInput').val();
-        alert(amount);
-        alert(id);
 
         $.ajax({
             type: 'POST',
@@ -90,16 +92,17 @@ function makePurchase() {
                 var nickels = changes.nickels;
                 var pennies = changes.pennies;
 
-                var row = quarters + ' quarters, ' + dimes + ' dimes, '
+                var changeMsg = quarters + ' quarters, ' + dimes + ' dimes, '
                     + nickels + ' nickels, ' + pennies + ' pennies';
 
-                $('#changes').val(row);
+                $('#changes').val(changeMsg);
                 $('#message').val('Thank You!');
+
             },
-            error: function (error) {
-                alert(Object.keys(error).length);
-                var message = error.message;
-                $('#message').val(message);
+
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                $('#message').val(err.message);
             }
         })
 
@@ -113,12 +116,7 @@ function changeReturn() {
         $('#message').val('');
         $('#itemNum').val('');
         $('#changes').val('');
-        $('#row1').empty();
-        $('#row2').empty();
-        $('#row3').empty();
-        $('#additionalRow').remove();
-
-
+        $('#content').empty();
         loadItems();
     });
 }

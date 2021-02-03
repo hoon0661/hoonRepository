@@ -37,7 +37,7 @@ function loadItems() {
                 var quantity = item.quantity;
                 var row = '';
 
-                row += '<div class="col"><div class="btn btn-lg border btnResize" onclick="updateMessages('
+                row += '<div class="col-4 text-center"><div class="btn btn-lg border btnResize" onclick="updateMessages('
                     + id + ',' + itemNum + ',' + quantity + ',' + price + ')"><h5 class="display-5 text-left">'
                     + itemNum + '</h5>';
                 row += '<p class="text-center">' + name + '</p>';

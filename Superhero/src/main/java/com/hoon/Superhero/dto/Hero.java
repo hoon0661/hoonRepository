@@ -33,7 +33,7 @@ public class Hero {
     @NotBlank(message = "Please choose hero type.")
     private String heroType;
     
-    @NotBlank(message = "Please provide url for image")
+//    @NotBlank(message = "Please provide url for image")
     private String imgUrl;
     private List<Organization> organizations;
 //    private List<Sighting> sightings; 
